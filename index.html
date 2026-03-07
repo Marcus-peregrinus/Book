@@ -18,7 +18,7 @@
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html {
-      scroll-behavior: smooth;  /* Native smooth scroll – works on most modern mobile/desktop browsers */
+      scroll-behavior: smooth;
     }
     body {
       font-family: 'Open Sans', sans-serif;
@@ -28,86 +28,101 @@
     }
     .hero {
       position: relative;
-      height: 90vh;
-      min-height: 600px;
+      height: 85vh;
+      min-height: 550px;
       background: linear-gradient(rgba(15,15,26,0.75), rgba(15,15,26,0.9)), url('cover.png') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 0 20px;
+      padding: 0 15px;
     }
     .hero-content {
-      max-width: 1000px;
+      max-width: 950px;
     }
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 4rem;
+      font-size: 3.8rem;
       color: var(--accent-gold);
-      margin-bottom: 0.5rem;
-      text-shadow: 0 6px 15px rgba(0,0,0,0.9);
+      margin-bottom: 0.4rem;
+      text-shadow: 0 5px 12px rgba(0,0,0,0.9);
     }
     .subtitle {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       color: var(--text-light);
-      margin: 1rem 0 2rem;
+      margin: 0.8rem 0 1.8rem;
     }
     .author {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: var(--accent-red);
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
     .cta-button {
       display: inline-block;
       background: var(--accent-red);
       color: white;
-      padding: 1.2rem 3rem;
-      font-size: 1.4rem;
+      padding: 1rem 2.8rem;
+      font-size: 1.3rem;
       text-decoration: none;
       border-radius: 50px;
       transition: all 0.3s ease;
-      box-shadow: 0 8px 25px rgba(193,18,31,0.5);
+      box-shadow: 0 7px 22px rgba(193,18,31,0.5);
     }
     .cta-button:hover {
       background: #a00d18;
-      transform: translateY(-4px);
-      box-shadow: 0 12px 35px rgba(193,18,31,0.7);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(193,18,31,0.7);
     }
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 5rem 20px;
+      padding: 4rem 15px;
     }
     section {
-      margin-bottom: 5rem;
+      margin-bottom: 4.5rem;
     }
     h2, h3 {
       font-family: 'Playfair Display', serif;
       color: var(--accent-gold);
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.5rem;
       text-align: center;
     }
     .intro p {
-      font-size: 1.25rem;
-      max-width: 900px;
-      margin: 0 auto 2.5rem;
+      font-size: 1.2rem;
+      max-width: 850px;
+      margin: 0 auto 2rem;
       color: var(--text-light);
       text-align: center;
     }
+    .pdf-section {
+      text-align: center;
+    }
+    .pdf-preview {
+      width: 100%;
+      height: 750px;
+      border: none;
+      border-radius: 14px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.6);
+      margin: 2.5rem 0 2rem;
+    }
     .toc {
       background: var(--card-bg);
-      padding: 2.5rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+      padding: 2rem;
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+      margin-top: 3rem;
     }
     .toc ul {
       list-style: none;
-      columns: 2;
-      column-gap: 4rem;
     }
     .toc li {
       margin-bottom: 1rem;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 0.8rem;
+    }
+    .toc li:last-child {
+      border-bottom: none;
     }
     .toc a {
       color: var(--text);
@@ -117,29 +132,26 @@
     .toc a:hover {
       color: var(--accent-gold);
     }
-    .pdf-preview {
-      width: 100%;
-      height: 800px;
-      border: none;
-      border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-      margin: 3rem 0;
-    }
     .license {
       text-align: center;
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--text-light);
       margin-top: 5rem;
-      padding: 3rem;
+      padding: 2.5rem;
       background: var(--card-bg);
-      border-radius: 16px;
+      border-radius: 14px;
     }
     @media (max-width: 768px) {
-      h1 { font-size: 3rem; }
-      .hero { height: 70vh; min-height: 500px; }
-      .toc ul { columns: 1; }
-      .pdf-preview { height: 600px; }
-      .cta-button { font-size: 1.2rem; padding: 1rem 2.5rem; }
+      h1 { font-size: 2.8rem; }
+      .hero { height: 70vh; min-height: 480px; }
+      .pdf-preview { height: 550px; }
+      .toc li { font-size: 1rem; }
+      .cta-button { font-size: 1.15rem; padding: 0.9rem 2.2rem; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 2.4rem; }
+      .subtitle { font-size: 1.2rem; }
+      .pdf-preview { height: 450px; }
     }
   </style>
 </head>
@@ -157,8 +169,16 @@
   <div class="container">
     <section class="intro">
       <h2>An Invitation from Tunisia</h2>
-      <p>Brother, in the midst of doubt and searching, this book is my testimony from hollow years of restlessness to the awakening light of Christ. Written from the heart of Tunisia a majority muslim country, it offers honest reflections on humility, purity, love, and intimate friendship with Jesus, then defends the truth of Scripture, the beauty of the Trinity, and answers sincere questions including those from an Islamic perspective with clarity and respect.</p>
+      <p>Brother, in the midst of doubt and searching, this book is my testimony from hollow years of restlessness to the awakening light of Christ. it offers honest reflections on humility, purity, love, and intimate friendship with Jesus, then defends the truth of Scripture, the Trinity, and answers sincere questions including those from an Islamic perspective with clarity and respect.</p>
       <p>May these words draw your heart closer to the Living Christ who satisfies every longing. Read, share freely, and encounter Him.</p>
+    </section>
+
+    <section class="pdf-section" id="preview">
+      <h2>Preview the Book</h2>
+      <embed src="The-Word-Made-Flesh.pdf" type="application/pdf" class="pdf-preview">
+      <p style="margin: 1.5rem 0 3rem;">
+        <a href="The-Word-Made-Flesh.pdf" class="cta-button" style="font-size: 1.2rem; padding: 1rem 2.5rem;">Download Full PDF (104 Pages)</a>
+      </p>
     </section>
 
     <section id="contents">
@@ -204,24 +224,16 @@
       </div>
     </section>
 
-    <section id="preview">
-      <h2>Preview the Book</h2>
-      <embed src="The-Word-Made-Flesh.pdf" type="application/pdf" class="pdf-preview">
-      <p style="text-align: center; margin-top: 2rem;">
-        <a href="The-Word-Made-Flesh.pdf" class="cta-button" style="font-size: 1.2rem; padding: 1rem 2.5rem;">Download Full PDF (100 Pages)</a>
-      </p>
-    </section>
-
     <div class="license">
       © 2026 Marcus Peregrinus of Tunisia<br><br>
       This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).<br>
-      You are free to share (copy and redistribute the material in any medium or format) and adapt (remix, transform, and build upon the material) for non-commercial purposes only, provided you give appropriate credit, provide a link to the license, and indicate if changes were made. If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.<br><br>
+      You are free to share and adapt non-commercially with attribution and share-alike terms.<br><br>
       View full license: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: var(--accent-gold);">creativecommons.org/licenses/by-nc-sa/4.0/</a><br><br>
       May the Lord use this to draw many hearts to Himself.
     </div>
   </div>
 
-  <!-- Smooth scroll JS fallback (enhances mobile experience) -->
+  <!-- Smooth scroll JS fallback -->
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
